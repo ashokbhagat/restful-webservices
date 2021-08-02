@@ -28,6 +28,10 @@ public class User {
         this.birthDate = birthDate;
     }
 
+    public User(){
+
+    }
+
     public Integer getId() {
         return id;
     }
