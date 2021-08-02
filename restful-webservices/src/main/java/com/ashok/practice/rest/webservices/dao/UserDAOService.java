@@ -9,15 +9,15 @@ import java.util.Iterator;
 import java.util.List;
 
 @Component
-public class UserDAO {
+public class UserDAOService {
     private static int userCount = 3;
 
     private static List<User> users = new ArrayList<>();
 
     static {
-        users.add(new User(1, "Ashok", new Date()));
-        users.add(new User(2, "Ramesh", new Date()));
-        users.add(new User(3, "Bhagat", new Date()));
+        users.add(new User(1, "A", new Date()));
+        users.add(new User(2, "R", new Date()));
+        users.add(new User(3, "B", new Date()));
     }
 
     public List<User> findAll() {

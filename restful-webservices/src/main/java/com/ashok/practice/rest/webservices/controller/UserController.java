@@ -1,12 +1,11 @@
 package com.ashok.practice.rest.webservices.controller;
 
 import com.ashok.practice.rest.webservices.domain.User;
-import com.ashok.practice.rest.webservices.dao.UserDAO;
+import com.ashok.practice.rest.webservices.dao.UserDAOService;
 import com.ashok.practice.rest.webservices.exceptions.UserNotFoundException;
 import com.ashok.practice.rest.webservices.exceptions.UserNotSupportedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -17,7 +16,7 @@ import java.util.List;
 @RestController
 public class UserController {
     @Autowired
-    private UserDAO userDAO;
+    private UserDAOService userDAO;
 
     @GetMapping("/users")
     public List<User> getAllUsers() {
